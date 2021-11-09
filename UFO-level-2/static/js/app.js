@@ -45,17 +45,27 @@ d3.select("tbody").html("");
   var inputValueCountry = inputElementCountry.property("value");
   var inputValueShape = inputElementShape.property("value");
 
-
-  if (inputValueDate === "" || inputValueCity === "" || inputElementState === "" || inputElementCountry === "" || inputElementShape === ""){
-
-    var filteredData = tableData.filter( filtered_data => filtered_data.datetime === inputValueDate || filtered_data.city === inputValueCity ||
-      filtered_data.state === inputValueState || filtered_data.country === inputValueCountry || filtered_data.shape === inputValueShape );
-  }
-  else{
-
-    var filteredData = tableData.filter( filtered_data => filtered_data.datetime === inputValueDate && filtered_data.city === inputValueCity &&
-      filtered_data.state === inputValueState && filtered_data.country === inputValueCountry && filtered_data.shape === inputValueShape );
-  }
+  input_value_list = [inputValueDate,inputValueCity,inputValueState,inputValueCountry,inputValueShape]
+  filteredData = tableData
+  input_value_list.forEach(element => {
+      switch(element !== ""){
+        case element === inputValueDate:
+          filteredData = filteredData.filter( filtered_data => filtered_data.datetime === inputValueDate)
+          break;
+        case element === inputValueCity:
+          filteredData = filteredData.filter( filtered_data => filtered_data.city === inputValueCity)
+          break;
+        case element === inputValueState:
+          filteredData = filteredData.filter( filtered_data => filtered_data.state === inputValueState)
+          break;
+        case element === inputValueCountry:
+          filteredData = filteredData.filter( filtered_data => filtered_data.country === inputValueCountry)
+          break;
+        case element === inputValueShape:
+          filteredData = filteredData.filter( filtered_data => filtered_data.shape === inputValueShape)
+          break;
+      } 
+  }) 
 
   // Return the filtered table
   console.log(filteredData)
