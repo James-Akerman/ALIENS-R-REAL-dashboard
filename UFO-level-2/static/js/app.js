@@ -2,6 +2,9 @@
 var tableData = data;
 
 // PART 1 - Display the table
+// Clear all the previous html
+d3.select("tbody").html("");
+// Display the table
 var tbody = d3.select("tbody");
 tableData.forEach((ufo) => {
     var row = tbody.append("tr");
@@ -18,18 +21,17 @@ var button = d3.select("#filter-btn");
 var reset_button = d3.select("#reset-btn");
 
 // Select the form
-// var form = d3.select("form");
 // Create event handlers 
-button.on("click", filterRows);
-// form.on("submit",filterRows);
+button.on("click", filterTable);
 reset_button.on("click", resetTable);
 
-function filterRows() {
-// Prevent the page from refreshing
+
+function filterTable() {
+  // Prevent the page from refreshing
    d3.event.preventDefault();
 
-// Clear all the previous html
-d3.select("tbody").html("");
+  // Clear all the previous html
+  d3.select("tbody").html("");
   
   // Select the input element and get the raw HTML node
   var inputElementDate = d3.select("#datetime");
@@ -45,6 +47,7 @@ d3.select("tbody").html("");
   var inputValueCountry = inputElementCountry.property("value");
   var inputValueShape = inputElementShape.property("value");
 
+  // Filter the data by the values entered into the input fields
   input_value_list = [inputValueDate,inputValueCity,inputValueState,inputValueCountry,inputValueShape]
   filteredData = tableData
   input_value_list.forEach(element => {
@@ -66,7 +69,6 @@ d3.select("tbody").html("");
           break;
       } 
   }) 
-
   // Return the filtered table
   console.log(filteredData)
   var tbody = d3.select("tbody");
@@ -82,9 +84,10 @@ d3.select("tbody").html("");
 
 function resetTable(){
   // Clear all the previous html
-d3.select("tbody").html("");
-var tbody = d3.select("tbody");
-tableData.forEach((ufo) => {
+  d3.select("tbody").html("");
+  // Get display the unfiltered data again in the table
+  var tbody = d3.select("tbody");
+  tableData.forEach((ufo) => {
     var row = tbody.append("tr");
     Object.entries(ufo).forEach(([key, value]) => {
       var cell = row.append("td");
