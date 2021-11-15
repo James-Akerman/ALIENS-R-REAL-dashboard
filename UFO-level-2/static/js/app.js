@@ -48,32 +48,31 @@ function filterTable() {
   var inputValueShape = inputElementShape.property("value");
 
   // Filter the data by the values entered into the input fields
-  input_value_list = [inputValueDate,inputValueCity,inputValueState,inputValueCountry,inputValueShape]
-  filteredData = tableData
-  
+  input_value_list = [inputValueDate,inputValueCity,inputValueState,inputValueCountry,inputValueShape];
+  filteredData = tableData;
   input_value_list.forEach(element => {
       switch(element !== ""){
         case element === inputValueDate:
-          filteredData = filteredData.filter( filtered_data => filtered_data.datetime === inputValueDate)
+          filteredData = filteredData.filter( filtered_data => filtered_data.datetime === inputValueDate);
           break;
         case element === inputValueCity:
-          filteredData = filteredData.filter( filtered_data => filtered_data.city === inputValueCity)
+          filteredData = filteredData.filter( filtered_data => filtered_data.city === inputValueCity);
           break;
         case element === inputValueState:
-          filteredData = filteredData.filter( filtered_data => filtered_data.state === inputValueState)
+          filteredData = filteredData.filter( filtered_data => filtered_data.state === inputValueState);
           break;
         case element === inputValueCountry:
-          filteredData = filteredData.filter( filtered_data => filtered_data.country === inputValueCountry)
+          filteredData = filteredData.filter( filtered_data => filtered_data.country === inputValueCountry);
           break;
         case element === inputValueShape:
-          filteredData = filteredData.filter( filtered_data => filtered_data.shape === inputValueShape)
+          filteredData = filteredData.filter( filtered_data => filtered_data.shape === inputValueShape);
           break;
         default:
-          filteredData = tableData;
-      } 
-  }) 
+          filteredData = filteredData; // don't do anything if something goes wrong
+      }; 
+  }); 
   // Return the filtered table
-  console.log(filteredData)
+  console.log(filteredData);
   var tbody = d3.select("tbody");
   filteredData.forEach((ufo) => {
     var row = tbody.append("tr");
