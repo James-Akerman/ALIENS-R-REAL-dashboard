@@ -67,6 +67,8 @@ function filterTable() {
         case element === inputValueShape:
           filteredData = filteredData.filter( filtered_data => filtered_data.shape === inputValueShape)
           break;
+        default:
+          filteredData = tableData;
       } 
   }) 
   // Return the filtered table
