@@ -50,6 +50,7 @@ function filterTable() {
   // Filter the data by the values entered into the input fields
   input_value_list = [inputValueDate,inputValueCity,inputValueState,inputValueCountry,inputValueShape]
   filteredData = tableData
+  
   input_value_list.forEach(element => {
       switch(element !== ""){
         case element === inputValueDate:
