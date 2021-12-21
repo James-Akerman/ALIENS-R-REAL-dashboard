@@ -3,7 +3,7 @@
 ### Background
 In this Monash University Data Analytics Boot Camp/Trilogy Education Services homework, I imagined I was tasked with working for a hypothetical organisation called `ALIENS-R-REAL` which had collected all of the eye-witness reports of alien sightings.
 
-I was tasked with writing code that will create a table dynamically based upon a [dataset provided](static/js/data.js) which also allowed users to filter the table data for specific values.
+I was tasked with writing code that will create a table dynamically based upon a [dataset provided](UFO-level-1/static/js/data.js) which also allowed users to filter the table data for specific values.
 
 
 ### Tasks
