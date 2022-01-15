@@ -13,8 +13,10 @@ There are two versions of this project contained within this respository
 ![UFO-level-2-filtered](images/UFO-level-2-filtered.PNG)
 
 ## Tools/Packages used
-
+- HMTL5
+- CSS
 - Javascript
+  - Bootstrap
   - D3
 
 ## How to use
