@@ -7,10 +7,10 @@ There are two versions of this project contained within this respository
 - **UFO-level-2** which allows sightings to be filtered based on multiple categories.
 
 ### [UFO-level-1](UFO-level-1)
-![UFO-level-1](images/UFO-level-1.PNG)
+![UFO-level-1-filtered](images/UFO-level-1.PNG)
 
 ### [UFO-level-2](UFO-level-2)
-![UFO-level-2](images/UFO-level-2.PNG)
+![UFO-level-2-filtered](images/UFO-level-2.PNG)
 
 ## Tools/Packages used
 
