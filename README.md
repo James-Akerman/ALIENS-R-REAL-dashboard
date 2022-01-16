@@ -9,8 +9,12 @@ There are two versions of this project contained within this respository
 ### [UFO-level-1](UFO-level-1)
 ![UFO-level-1-filtered](images/UFO-level-1-filtered.PNG)
 
+<br>
+
 ### [UFO-level-2](UFO-level-2)
 ![UFO-level-2-filtered](images/UFO-level-2-filtered.PNG)
+
+<br>
 
 ## Tools/Packages used
 - HMTL5
@@ -18,6 +22,8 @@ There are two versions of this project contained within this respository
 - Javascript
   - Bootstrap
   - D3
+
+<br>
 
 ## How to use
 - Go to either [UFO-level-1](UFO-level-1) or [UFO-level-2](UFO-level-2)
