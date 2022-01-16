@@ -1,4 +1,6 @@
 # ALIENS-R-REAL Dashboard
+
+## Overview of the Project
 This project creates a HTML dashboard for a hypothetical organisation called ***ALIENS-R-REAL*** which had collected [data](UFO-level-1/static/js/data.js) of several eye-witness reports of alien sightings.
 The dashboard includes dynamic table which can filter UFO sightings based either date/time, city, state, country, and/or shape.
 
